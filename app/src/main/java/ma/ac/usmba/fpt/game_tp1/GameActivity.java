@@ -2,6 +2,7 @@ package ma.ac.usmba.fpt.game_tp1;
 
 import android.graphics.Point;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.WindowManager;
 import android.widget.Toast;
 
@@ -17,7 +18,6 @@ public class GameActivity extends AppCompatActivity {
         Point size = new Point();
         getWindowManager().getDefaultDisplay().getSize(size);
         gameView = new GameView(this,size.x, size.y);
-        Toast.makeText(getApplicationContext(), "(" + size.x + ", "+ size.y+")", Toast.LENGTH_LONG).show();
         setContentView(gameView);
     }
 
@@ -32,4 +32,5 @@ public class GameActivity extends AppCompatActivity {
         super.onResume();
         gameView.resume();
     }
+
 }

@@ -17,8 +17,8 @@ public class Jump {
         j1 = Bitmap.createScaledBitmap(j1, width, height, false);
         j2 = Bitmap.createScaledBitmap(j2, width, height, false);
 
-        y = screenY;
-        x = 30;
+        y = screenY - j1.getHeight();
+        x = 50;
     }
 
     public Bitmap getJump() {
@@ -28,6 +28,5 @@ public class Jump {
         }
         wingCounter--;
         return j2;
-
     }
 }
